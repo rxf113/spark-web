@@ -7,12 +7,12 @@ import org.springframework.context.annotation.{Bean, Configuration}
 class SparkConfig {
 
   @Bean
-  def sparkConf(): SparkConf = {
+  def SparkConf(): SparkConf = {
     new SparkConf().setAppName("rxf113").setMaster("local")
   }
 
   @Bean
-  def SparkContext = new SparkContext(sparkConf())
+  def SparkContext = new SparkContext(SparkConf())
 
   //  def sparkContext(): SparkContext = {
 //    new SparkContext(sparkConf())
